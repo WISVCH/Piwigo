@@ -1,6 +1,9 @@
+sudo: required
 service:
 - docker
 language: php
+php:
+- 7.0
 script:
 - docker build --no-cache --pull -t wisvch/flitcie-website:$TRAVIS_BUILD_NUMBER .
 after_success:
